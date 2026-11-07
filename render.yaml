@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: reviewguard
+    runtime: python
+    plan: free
+    buildCommand: >-
+      pip install -r requirements.txt "scikit-learn==1.6.1" gunicorn &&
+      python -m nltk.downloader -d ./nltk_data stopwords wordnet punkt punkt_tab omw-1.4
+    startCommand: gunicorn app:app --workers 1 --threads 4 --timeout 120
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: NLTK_DATA
+        value: /opt/render/project/src/nltk_data
