@@ -6,6 +6,13 @@ Paste a product URL, and ReviewGuard scrapes the reviews, classifies each one as
 
 Built as a Software Engineering course project at the Technological Institute of the Philippines (BS Computer Science, July 2025).
 
+## Live demo
+
+
+**[Try ReviewGuard live](https://reviewguard-3key.onrender.com)**
+
+> The free host may take up to a minute to wake up on the first visit.
+
 ## Screenshots
 
 **Reviews flagged as authentic**
